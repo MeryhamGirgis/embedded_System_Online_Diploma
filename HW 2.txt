@@ -1,0 +1,220 @@
+ex 1
+
+#include "stdio.h"
+int main()
+{
+	int x;
+	printf("Enter an integer you want to check : ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%d", &x);
+	if(x%2==0)
+	{
+		printf("%d is even ", x);
+	}
+	else if(x%2==1)
+	{
+		printf("%d is odd ", x);
+	}
+	return 0;
+}
+---------------------------------------------------
+ex 2
+#include "stdio.h"
+int main()
+{
+	char x;
+	printf("Enter an alphabet: ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%c", &x);
+	switch(x)
+	{
+	case 'a':
+	case 'A':
+	{
+		printf("%c is a vowel", x);
+		break;
+	}
+	case 'e':
+	case 'E':
+	{
+		printf("%c is a vowel", x);
+		break;
+	}
+	case 'i':
+	case 'I':
+	{
+		printf("%c is a vowel", x);
+		break;
+	}
+	case 'o':
+	case 'O':
+	{
+		printf("%c is a vowel", x);
+		break;
+	}
+	case 'u':
+	case 'U':
+	{
+		printf("%c is a vowel", x);
+		break;
+	}
+	default:
+	{
+		printf("%c is a consonant", x);
+		break;
+	}
+	}
+	return 0;
+}
+---------------------------------------------------------
+ex 3:
+#include "stdio.h"
+int main()
+{
+	float x, y, z;
+	printf("Enter three numbers: ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%f %f %f", &x, &y, &z);
+	if((x-y)>0 && (x-z)>0)
+	{
+		printf("largest number= %f", x);
+	}
+	else if((y-x)>0 && (y-z)>0)
+	{
+		printf("largest number= %f", y);
+	}
+	else
+	{
+		printf("largest number= %f", z);
+	}
+
+	return 0;
+}
+-------------------------------------------------
+ex 4
+#include "stdio.h"
+int main()
+{
+	float x;
+	printf("Enter a number: ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%f", &x);
+	if(x==0)
+	{
+		printf("you entered zero ");
+	}
+	else if(x> 0)
+	{
+		printf("%f is positive ", x);
+	}
+	else
+	{
+		printf("%f is negative ", x);
+	}
+	return 0;
+}
+-------------------------------------------------
+ex 5
+#include "stdio.h"
+int main()
+{
+	char y;
+	printf("Enter a character: ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%c", &y);
+	if(((y>=65)&&(y<=90)) || ((y>=96)&&(y<=122)))
+	{
+		printf("%c is an alphabet", y);
+	}
+	else
+	{
+		printf("%c is not an alphabet", y);
+	}
+
+	return 0;
+}
+------------------------------------------
+ex 6
+
+#include "stdio.h"
+int main()
+{
+	int y, sum= 0, x;
+	printf("Enter an integer: ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%d", &y);
+	for(x= 1; x<= y; x++)
+	{
+		sum+=x;
+	}
+	printf("sum = %d", sum);
+	return 0;
+}
+--------------------------------------------------------
+ex 7
+#include "stdio.h"
+int main()
+{
+
+	int y, product=1, x;
+	printf("Enter an integer : ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%d", &y);
+	if(y> 0)
+	{
+		for(x=1; x<= y; x++)
+		{
+			product *= x;
+		}
+		printf("factorial = %d ", product);
+		}
+		else if(y == 0)
+			printf("factorial = 1");
+		else
+			printf("Error!!! factorial of negative number doesn't exist");
+
+	return 0;
+}
+----------------------------------------------------------------
+ex 8
+#include "stdio.h"
+int main()
+{
+	char y;
+	float x, z, r;
+	printf("Enter an operator either + or - or / : ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%c", &y);
+	printf("Enter two operands :");
+	fflush(stdin);  fflush(stdout);
+	scanf("%f %f", &x, &z);
+	switch(y)
+	{
+	case '+':
+	{
+		r = x+ z;
+		printf(" %f + %f =  %f", x, z, r);
+		break;
+	}
+	case '-':
+	{
+		r= x- z;
+		printf(" %f - %f =  %f", x, z, r);
+		break;
+	}
+	case '*':
+	{
+		r= x* z;
+		printf(" %f * %f = %f", x, z, r);
+		break;
+	}
+	case '/':
+	{
+		r= x/z;
+		printf(" %f / %f = %f", x, z, r);
+		break;
+	}
+	}
+
+	return 0;
+}

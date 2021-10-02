@@ -1,0 +1,107 @@
+ex 1
+#include "stdio.h"
+
+int main()
+{
+printf("c programming \r\n");
+return 0;
+}
+
+---------------------------
+ex2:
+#include "stdio.h"
+
+int main()
+{
+	int a;
+	printf("Enter an integer: ");
+	 fflush(stdout);
+	scanf("%d", &a);
+	printf("you entered : %d ", a);
+	return 0;
+}
+--------------------------------------------
+ex 3
+
+#include "stdio.h"
+
+int main()
+{
+	int x, y, sum= 0;
+	printf("Enter two integers: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d %d", &x, &y);
+	printf("Sum: %d ", sum= x+ y);
+
+	return 0;
+}
+---------------------------------------------
+
+ex 4
+
+#include "stdio.h"
+
+int main()
+{
+	float x, y, product= 1;
+	printf("Enter two numbers: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f %f", &x, &y);
+	printf("product: %f ", product= x * y);
+
+	return 0;
+}
+--------------------------------------------------
+
+ex 5
+
+#include "stdio.h"
+
+int main()
+{
+	int x;
+	char y;
+	printf("enter a character : ");
+	fflush(stdin); fflush(stdout);
+	scanf("%c", &y);
+	printf("ASCII value of %c= %d ", y, x=y);
+
+	return 0;
+}
+-------------------------------------------------------
+
+ex 6
+int main()
+{
+	float a, b, c=0;
+	printf("Enter value of a: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f", &a);
+	printf("Enter value of b: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f", &b);
+	c= a;
+	a= b;
+	b= c;
+	printf("After swapping, value of a = %f \n", a);
+	printf("After swapping, value of b = %f ", b);
+	return 0;
+}
+---------------------------------------------------
+ex 7
+
+#include "stdio.h"
+int main()
+{
+	float a, b;
+	printf("Enter value of a: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f", &a);
+	printf("Enter value of b: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f", &b);
+	b= b+ a;
+	printf("After swapping, value of a = %f \n", a= b- a);
+	printf("After swapping, value of b = %f ", b-=a);
+	return 0;
+}
