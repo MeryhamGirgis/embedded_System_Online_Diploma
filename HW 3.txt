@@ -1,0 +1,224 @@
+Ex 1 arrays
+#include "stdio.h"
+int main()
+{
+	int i, z;
+	float a[2][2], b[2][2];
+	printf("Enter the elements of the 1st matrix\r\n");
+	for(i=0; i<2; i++)
+	{
+		for(z=0; z<2; z++ )
+		{
+			printf("Enter a%d%d:", i+1, z+1);
+			fflush(stdout); fflush(stdin);
+			scanf("%f", &a[i][z]);
+		}
+	}
+	printf("Enter the elements of the 2nd matrix\r\n");
+	for(i=0; i<2; i++)
+	{
+		for(z=0; z<2; z++ )
+		{
+			printf("Enter b%d%d:", i+1, z+1);
+			fflush(stdout); fflush(stdin);
+			scanf("%f", &b[i][z]);
+		}
+	}
+	printf("sum of Matrix \r\n");
+	for(i=0; i<2; i++)
+	{
+		for(z=0; z<2; z++)
+		{
+			a[i][z]= a[i][z] + b[i][z];
+			printf("%f   ", a[i][z]);
+		}
+		printf("\r\n");
+	}
+
+	return 0;
+}
+-----------------------------------------------------------
+EX 2 arrays
+#include "stdio.h"
+int main()
+{
+	int i,n ;
+	float sum;
+	printf("Enter the numbers of data");
+	fflush(stdout); fflush(stdin);
+	scanf("%d", &n);
+	float a[n];
+	for(i=0, sum = 0; i<n; i++)
+	{
+		printf("%d. Enter number:", i+1);
+		fflush(stdout); fflush(stdin);
+		scanf("%f", &a[i]);
+		sum+= a[i];
+	}
+	printf("Average = %f", sum/n);
+	return 0;
+}
+--------------------------------------------------
+Ex3 arrays
+#include "stdio.h"
+int main()
+{
+	int i, z, r, c;
+	printf("Enter rows and colums of matrix :");
+	fflush(stdout); fflush(stdin);
+	scanf("%d %d", &r, &c);
+	int a[r][c];
+	int T[c][r];
+	printf("Enter elements of the Matrix: \r\n");
+	for(i=0; i<r; i++)
+	{
+		for(z=0; z<c; z++)
+		{
+			printf("Enter element a%d%d:", i+1, z+1);
+			fflush(stdout); fflush(stdin);
+			scanf("%d", &a[i][z]);
+		}
+	}
+	printf("Entered Matrix \r\n");
+	for(i=0; i<r; i++)
+	{
+		for(z=0; z<c; z++)
+		{
+			printf("%d   ", a[i][z]);
+		}
+		printf("\r\n");
+	}
+	printf("Transpose Matrix :\r\n");
+	for(i=0; i<r; i++)
+	{
+		for(z=0; z<c; z++)
+		{
+			T[z][i]= a[i][z];
+		}
+	}
+	for(i=0; i<c; i++)
+	{
+		for(z=0; z<r; z++)
+		{
+			printf("%d  ", T[i][z]);
+		}
+		printf("\r\n");
+	}
+	return 0;
+}
+----------------------------------------------------
+Ex 4 arrays
+#include "stdio.h"
+int main()
+{
+	int n, i,x,z;
+	printf("Enter no. of elements  :");
+	fflush(stdout); fflush(stdin);
+	scanf("%d", &n);
+	int a[n];
+	for(i=0; i<n; i++)
+	{
+		a[i]= i+1;
+		printf("%d ", a[i]);
+	}
+	printf("\nEnter the element to be inserted:");
+	fflush(stdout); fflush(stdin);
+		scanf("%d", &x);
+		printf("Enter the location:");
+		fflush(stdout); fflush(stdin);
+			scanf("%d", &z);
+			for(i=0; i<n; i++)
+				{
+				if(i+1==z)
+				{
+					printf("%d ", a[i]=x);
+				}
+					a[i]= i+1;
+					printf("%d ", a[i]);
+				}
+	return 0;
+}
+--------------------------------------------------------------
+Ex 5 arrays 
+#include "stdio.h"
+int main()
+{
+	int n, i,x;
+	printf("Enter no. of elements  :");
+	fflush(stdout); fflush(stdin);
+	scanf("%d", &n);
+	int a[n];
+	for(i=0; i<n; i++)
+	{
+		a[i]= (i+1)*11;
+		printf("%d ", a[i]);
+	}
+	printf("\nEnter the element to be searched");
+	fflush(stdout); fflush(stdin);
+	scanf("%d", &x);
+	for(i=0; i<n; i++)
+	{
+		if(a[i]==x)
+			printf("Number found at location : %d",i+1);
+	}
+	return 0;
+}
+---------------------------------------------------------
+Ex 1 string
+#include "stdio.h"
+int main()
+{
+	int i, sum =0;
+	char a[30], x;
+	printf("Enter a string:");
+	fflush(stdout); fflush(stdin);
+	gets(a);
+	printf("Enter a character to find frequency: ");
+	fflush(stdout); fflush(stdin);
+	scanf("%c", &x);
+	for(i=0;i < 30; i++)
+	{
+		if(x == a[i])
+			++sum;
+	}
+	printf("frequency of %c = %d ", x, sum);
+	return 0;
+}
+------------------------------------------------
+Ex 2 string
+#include "stdio.h"
+int main()
+{
+	int i, sum =0;
+	char a[30];
+	printf("Enter a string:");
+	fflush(stdout); fflush(stdin);
+	gets(a);
+
+	for(i=0;a[i] != 0; i++)
+	{
+			++sum;
+	}
+	printf("length of string is: %d ", sum);
+	return 0;
+}
+---------------------------------------------------
+Ex 3 strings
+#include "stdio.h"
+#include "string.h"
+int main()
+{
+	int i, x;
+	char a[30], b[30];
+	printf("Enter the string:");
+	fflush(stdout); fflush(stdin);
+	gets(a);
+	x = strlen(a)-1;
+	for(i=0;a[i] !=0; i++)
+	{
+		b[x-i]=a[i];
+	}
+	printf("reverse sting is: %s ", b);
+	return 0;
+}
+------------------------------------------
